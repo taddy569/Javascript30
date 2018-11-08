@@ -20,7 +20,7 @@
       }
       ```
 
-## Step by step Javascript guide
+## Step by step JavaScript guide
 
 * Step 1: assign handler function to onload property of window object, it named init (feel free to name you own function).
 
@@ -123,5 +123,9 @@ function removeTransition(event) {
   event.target.classList.remove('playing');
 }
 ```
+
+## Something cool in the future
+
+* New great sound: guitar, piano, the music sheet, ...
 
 ### Yes, it's done. Congratulations!! You've finished the first day of challenge :D
