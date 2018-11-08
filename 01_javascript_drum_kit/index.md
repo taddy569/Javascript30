@@ -74,7 +74,7 @@
        }
        const div = document.querySelector(`div[data-key="${event.keyCode}"]`);
        div.classList.add('playing');
-       audio.currentTime = 0;
+       audio.currentTime = 0; // make sure no time for delay! you can comment this line and try press key continuously to see the difference
        audio.play();
      }
      ```
@@ -86,7 +86,7 @@
        if(event.propertyName !== "transform") {
          return;
        }
-       event.target.classList.remove('playing');
+       event.target.classList.remove('playing');//classList is property of element object, store all class of element in HTML.
      }
      ```
 
