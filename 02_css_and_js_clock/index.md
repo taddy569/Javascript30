@@ -74,6 +74,11 @@
        hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
      }
      ```
+  7. small notice about "object_element.style.transform":
+  
+     you'll see that in index.html file, each div for hour - minute - second hand also have *hand* class, and in style.css file, you find that transform property is assign to "rotate(90deg)", and now in JS code, we change that value every second, so what value should be chosen, is *external style sheet* way or *inline* way (object_element.style.transform will add style attribute into div element).
+  
+     you can read [here](https://www.w3schools.com/css/css_howto.asp) for more information.
 
 ## Putting it all together
 
