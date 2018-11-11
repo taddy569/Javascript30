@@ -20,22 +20,23 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 // Array.prototype.filter()
 
 // 1. Filter the list of inventors for those who were born in the 1500's
-// const fifteenCentury = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600 );
-// console.table(fifteenCentury);
+const fifteenCentury = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600 );
+console.table(fifteenCentury);
 
 // Array.prototype.map()
 
 // 2. Give us an array of the inventors' first and last names
-// const firstAndLastNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
-// console.table(firstAndLastNames);
+const firstAndLastNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
+console.table(firstAndLastNames);
 
 // Array.prototype.sort()
 
 // 3. Sort the inventors by birthdate, oldest to youngest
-// const birthdateAsc = inventors.sort((a, b) => (a.year < b.year) ? -1 : 1);
-// console.table(birthdateAsc);
+const birthdateAsc = inventors.sort((a, b) => (a.year < b.year) ? -1 : 1);
+console.table(birthdateAsc);
 
 // Array.prototype.reduce()
+
 // 4. How many years did all the inventors live?
 const totalYears = inventors.reduce(function(total, inventor) {
   return total + (inventor.passed - inventor.year);
@@ -43,10 +44,30 @@ const totalYears = inventors.reduce(function(total, inventor) {
 console.log(totalYears);
 
 // 5. Sort the inventors by years lived
+const sortYearLivedAsc = inventors.sort((inventor1, inventor2) => {
+  return ((inventor1.passed - inventor1.year) > (inventor2.passed - inventor2.year)) ? -1 : 1 ;
+})
+console.table(sortYearLivedAsc);
+
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+const anchors = Array.from(document.querySelectorAll('a'));
+const result = anchors.filter(anchor => anchor.textContent.includes('de')).map(anchor => anchor.textContent);
+console.table(result);
+
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+const sortLastName = inventors.sort((a, b) => {return (a.last < b.last) ? -1 : 1});
+console.table(sortLastName);
+
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+const result = data.reduce((obj, item) => {
+  if (!obj[item]) {
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+}, {});
+console.table(result);
