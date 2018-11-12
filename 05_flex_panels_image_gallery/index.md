@@ -59,7 +59,7 @@
    }
    ```
 
-   *toggle* method: you can image that like a bulb, when switch **ON**, buld light on and vice versa. This method add or remove class from element.
+   *toggle* method: you can image that like a bulb, when switch **ON**, bulb light **ON** and vice versa. This method add or remove class from element.
 
 4. You can see the map below for more clear, I was try to describe the process. If you find something not true, please let me know :D
 
