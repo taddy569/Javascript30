@@ -1,4 +1,4 @@
-# Day 3: Flex Panels Image Gallery
+# Day 5: Flex Panels Image Gallery
 
 ## Ready to work
 
