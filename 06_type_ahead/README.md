@@ -29,7 +29,7 @@
    fetch(endpoint).then(blobl => blob.json()).then(data => places.push(...data));
    ```
 
-   *push(...data): you can read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to understand why can we do that.
+   *push(...data)* : you can read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to understand why can we do that.
 
 3. We assign two element object for 2 variables
 
