@@ -24,9 +24,9 @@
 
 2. Inside init function, firstly we fetch data from the Internet and assign it to *places* variable
 
-   ```javascritp
+   ```javascript
    const places = [];
-   fetch(endpoint).then(blobl => blob.json()).then(data => places.push(...data));
+   window.fetch(endpoint).then(blobl => blob.json()).then(data => places.push(...data));
    ```
 
    *push(...data)* : you can read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to understand why can we do that.
