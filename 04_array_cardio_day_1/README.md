@@ -1,4 +1,4 @@
-# Day 3: Playing with CSS Variables and JS
+# Day 4: Array Cardio Day 1
 
 ## Ready to work
 
