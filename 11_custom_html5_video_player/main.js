@@ -15,7 +15,7 @@ function init() {
   video.addEventListener('play', updateToggleButton);
   video.addEventListener('pause', updateToggleButton);
   video.addEventListener('timeupdate', handleProgress);
-  
+  //
   video.addEventListener('ended', handleEnd);
 
   let mousedown = false;
@@ -30,13 +30,13 @@ function init() {
 
 
   toggle.addEventListener('click', togglePlay);
-
+  //
   muteToggle.addEventListener('click', muteHandle);
 
   ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
 
   skipButtons.forEach(skipButton => skipButton.addEventListener('click', skip));
-
+  //
   fullScreenToggle.addEventListener('click', handleFullScreen);
 
   function togglePlay (event) {
