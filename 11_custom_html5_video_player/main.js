@@ -39,6 +39,9 @@ function init() {
   //
   fullScreenToggle.addEventListener('click', handleFullScreen);
 
+  //
+  window.addEventListener('keydown', handleKey);
+
   function togglePlay (event) {
     const method = video.paused ? 'play' : 'pause';
     video[method]();
@@ -87,6 +90,13 @@ function init() {
     } else {
       player.requestFullscreen();
     }    
+  }
+
+  function handleKey (event) {
+    if (event.keyCode == 32) {
+      const method = (video.paused) ? 'play' : 'pause';
+      video[method]();
+    }
   }
 
 }

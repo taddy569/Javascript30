@@ -90,6 +90,12 @@ we have a div hold video section and controls section inside controls div sectio
    fullScreenToggle.addEventListener('click', handleFullScreen);
    ```
 
+   like youtube, when press spacebar key, the video will play or pause
+
+   ```javascript
+   window.addEventListener('keydown', handleKey);
+   ```
+
    We will work with helper function in the next section.
 
 ## Putting it all together
@@ -135,6 +141,9 @@ function init() {
   skipButtons.forEach(skipButton => skipButton.addEventListener('click', skip));
   //
   fullScreenToggle.addEventListener('click', handleFullScreen);
+
+  //
+  window.addEventListener('keydown', handleKey);
 
   function togglePlay (event) {
     const method = video.paused ? 'play' : 'pause';
@@ -184,6 +193,13 @@ function init() {
     } else {
       player.requestFullscreen();
     }    
+  }
+
+  function handleKey (event) {
+    if (event.keyCode == 32) {
+      const method = (video.paused) ? 'play' : 'pause';
+      video[method]();
+    }
   }
 
 }
