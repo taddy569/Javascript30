@@ -33,7 +33,7 @@
 
      ```javascript
      if (pressed.join('').includes(secretCode)) {
-       console.log('...);
+       console.log('...');
      }
      ```
 
