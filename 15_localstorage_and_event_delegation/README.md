@@ -52,7 +52,7 @@
           populateList(items, itemsList);
           localStorage.setItem('items', JSON.stringify(items));
           this.reset();
-          textField.focus();
+          textField.focus(); // allow user keep on submitting without click into text field again.
         }
         ```
       - handle display list
